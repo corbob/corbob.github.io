@@ -6,7 +6,7 @@ date: 2018-08-29 09:00 -0700
 
 If you're reading this... And it's after August 29th 2018 at 9 AM PDT... Then that means it worked. I mean I know it works because this isn't the first post of it's kind, but it's the first I'm actually going to keep up.
 
-It all started when I was discussing having finally setup this blog on Twitter. Someone asked if I could schedule blog posts. At the time I didn't know if it was possible, but a simple web search found the answer over here: [Scheduling posts on Github pages with AWS lambda functions by: Evert Pot](https://evertpot.com/scheduling-github-pages-lamdbas/) Of course, this is fine and dandy if you already have AWS. But! What if you have Azure? Could you do something similar with it?
+It all started when I was discussing having finally setup this blog on Twitter. Someone asked if I could schedule blog posts. At the time I didn't know if it was possible, but a simple web search found the answer over here: [Scheduling posts on Github pages with AWS lambda functions by: Evert Pot][1] Of course, this is fine and dandy if you already have AWS. But! What if you have Azure? Could you do something similar with it?
 
 # Setup
 
@@ -26,6 +26,17 @@ $Username = 'YourGitHubUsername'
 Invoke-RestMethod "https://api.github.com/repos/$Username/$Username.github.io/pages/builds" -Method Post -Headers @{ 'Authorization'="token $Token"; 'Accept'= 'application/vnd.github.mister-fantastic-preview+json' }
 ```
 
+# Break it on down
+
+I'm trying not to reproduce everything that Evert, but the basic breakdown as listed on his article:
+
+1. Create a [Personal Access Token][2] on GitHub.
+2. Make sure you give it at least the `repo` and `user` privileges.
+3. Make sure you add `future: false` to your `_config.yaml`.
+4. Write a blog post, and set the `date` to some point in the future.
+
+Once we've setup the Token, and set our `_config.yaml` properly, we can go ahead with the function. If we check out the GitHub [API documentation][3] we'll see that we can just make a simple web request to the API endpoint with our token and voila it initiates a build.
+
 # Costs
 
 I told you I'd get to costs... Unfortunately, it is looking like this isn't quite as cheap as AWS lambda functions. I haven't gone a full billing cycle, but at 9 days in, this is showing as costing $0.01 CAD so far. This isn't due to runtime of the function though. This is due entirely to the underlying storage costs. Apparently we need to pay for somewhere to store our function. And really, if it's going to cost us a few pennies a month, it's close enough to free.
@@ -37,3 +48,7 @@ One thing to be aware of, if you use the RSS feed. Every time this function fire
 # Next steps/Follow-up
 
 I will try to remind myself to update this post when my Azure month rolls over in Mid September. I fully expect that costs shouldn't change much.
+
+[1]: https://evertpot.com/scheduling-github-pages-lamdbas/
+[2]: https://github.com/settings/tokens
+[3]: https://developer.github.com/v3/repos/pages/
