@@ -1,0 +1,35 @@
+table, th {
+    border: 1px solid black;
+}
+
+td {
+    text-align: center;
+}
+
+.♥, .♦ {
+    color: red;
+}
+
+.☺ {
+    background-color: yellow;
+}
+
+td input {
+    width: 5em;
+    margin: 2px;
+}
+
+.totals {
+    text-align: right;
+}
+
+.invis {
+    display: none;
+}
+
+.visible {
+    visibility: visible;
+}
+div.playerNames {
+    padding-top: 5px;
+}
