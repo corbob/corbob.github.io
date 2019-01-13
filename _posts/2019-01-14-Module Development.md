@@ -17,10 +17,10 @@ Due to the way the PowerShell Gallery works you can install both modules with a 
 
 With our modules installed, the first thing we need to do is setup our directory structures. To build a module prepared for Azure DevOps (formerly <abbr title="Visual Studio Team Services">VSTS</abbr>), we will use the `PSFProject` template that comes with `PSModuleDevelopment`. I encourage you to explore the various templates to see what's available.
 
-To get started we run the following code: `Invoke-PSMDTemplate PSFProject` This will prompt for a `name` and `description`, provide these and the function will establish the scaffolding for our project. The directory layout will be something like the below:
+To get started we run the following code: `Invoke-PSMDTemplate PSFProject` This will prompt for a `name` and `description`, provide these and the function will establish the scaffolding for our project. The directory layout for a module called DemoModule will be something like the below:
 
 ```text
-.
+DemoModule
 ├── build
 │   ├── filesAfter.txt
 │   ├── filesBefore.txt
@@ -29,17 +29,17 @@ To get started we run the following code: `Invoke-PSMDTemplate PSFProject` This 
 │   └── vsts-validate.ps1
 ├── install.ps1
 ├── library
-│   └── Name
-│       ├── Name
+│   └── DemoModule
+│       ├── DemoModule
 │       │   ├── Class1.cs
-│       │   └── Name.csproj
-│       └── Name.sln
+│       │   └── DemoModule.csproj
+│       └── DemoModule.sln
 ├── LICENSE
-├── Name
+├── DemoModule
 │   ├── bin
 │   │   └── readme.md
 │   ├── en-us
-│   │   └── about_Name.help.txt
+│   │   └── about_DemoModule.help.txt
 │   ├── functions
 │   │   └── readme.md
 │   ├── internal
@@ -56,8 +56,8 @@ To get started we run the following code: `Invoke-PSMDTemplate PSFProject` This 
 │   │       ├── assignment.ps1
 │   │       ├── example.tepp.ps1
 │   │       └── readme.md
-│   ├── Name.psd1
-│   ├── Name.psm1
+│   ├── DemoModule.psd1
+│   ├── DemoModule.psm1
 │   ├── readme.md
 │   ├── tests
 │   │   ├── functions
@@ -72,8 +72,40 @@ To get started we run the following code: `Invoke-PSMDTemplate PSFProject` This 
 │   │   ├── pester.ps1
 │   │   └── readme.md
 │   └── xml
-│       ├── Name.Format.ps1xml
-│       ├── Name.Types.ps1xml
+│       ├── DemoModule.Format.ps1xml
+│       ├── DemoModule.Types.ps1xml
 │       └── readme.md
 └── README.md
 ```
+
+# Directory structure overview
+
+First thing we will notice is that it created a directory titled DemoModule. This is clearly where we store our module and the related item. Of note is the numerous readme files present in the template. These will give you an overview of the areas that they are found so you can take further advantage of them. What follows is a sumarization in my own words what these directories are for, or at least what I use them for.
+
+## build
+
+Within the DemoModule directory we have the build directory. This contains the scripts that are all preconfigured for use within an Azure DevOps pipeline. These will be covered in more depth in a coming installment of this series.
+
+## library
+
+Next is the library. This contains the files and directories needed for a C# project that will result in a DLL. If we use this, it will automatically put he DLL into the appropriate places for the rest of our template to take advantage of. This is an area of the template I have not looked at, nor have I taken advantage of *yet*.
+
+## DemoModule
+
+Up next is the DemoModule directory. This directory contains all of the files to actually make our module a module. This includes the manifest file, and the module file itself.
+
+### DemoModule/bin
+
+The bin directory contains any binary data that is part of your module.
+
+### DemoModule/en-us
+### DemoModule/functions
+### DemoModule/internal
+#### DemoModule/internal/configurations
+#### DemoModule/internal/functions
+#### DemoModule/internal/scripts
+#### DemoModule/internal/tepp
+### DemoModule/tests
+#### DemoModule/tests/functions
+#### DemoModule/tests/general
+### DemoModule/xml
