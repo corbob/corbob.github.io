@@ -143,3 +143,7 @@ The general directory contains the tests included with the scaffolding. These te
 ### DemoModule/xml
 
 The xml directory contains the Type and Format Definitions for your module. The PSModuleDevelopment includes some helpful functions for creating these xml files so you don't need to work with them by hand. If you have need for some of these files, I highly recommend investigating the readme file within as it does an excellent job of describing the process.
+
+# Conclusion
+
+Now that we've gone over the basics of getting started, you can go out and get your own modules started. Stay tuned for part 2 where we'll take our next step in the journey.
