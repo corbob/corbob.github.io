@@ -35,4 +35,21 @@ Following the conference, we will be doing our best to edit and split the stream
 
 Hopefully you!
 Seriously, we need you and others like you to submit proposals for sessions.
-[The Call for Proposals is open](https://papercall.io/bridgeconf) so 
+[The Call for Proposals is open](https://papercall.io/bridgeconf).
+So get out there and submit a proposal.
+Have you have done something recently that you are excited about?
+Are you currently working on a project that is bending PowerShell in ways you never thought possible?
+Are you just learning PowerShell and want to share your knowledge with others?
+We want to hear about it!
+
+We are not interested in just "300 level" content.
+Not everyone in the PowerShell community are pushing the boundaries.
+Some of us are just learning.
+Some of us have been doing this for a while.
+
+Even those of us that have been doing this for a decade can constantly learn new things.
+As an example: at last year's PowerShell Summit, [Tyler Leonhardt](https://twitter.com/TylerLeonhardt) gave a talk titled [Using Visual Studio Code as Your Default PowerShell Editor](https://www.youtube.com/watch?v=bGn45vIeAMM).
+Now I've contributed to the PowerShell extension for Visual Studio.
+I've been using it for years.
+And I learned stuff in watching the talk.
+If I can learn something about a tool that I use nearly daily, and in fact contribute to, then so can you!
