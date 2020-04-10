@@ -2,7 +2,7 @@
 layout: post
 title: Announcing #BridgeConf
 ---
-![#BridgeConf]({{ site.baseurl }}/images/BridgeConf.png)
+
 
 ## The Why
 
@@ -16,6 +16,8 @@ This community is far and away the most accepting and helpful community I have f
 At any given time there are people there to answer questions (sometimes more than just PowerShell).
 
 ## The What
+
+![#BridgeConf]({{ site.baseurl }}/images/BridgeConf-Details.png)
 
 As a way to celebrate the spirit of #bridge in the time of COVID-19 and social distancing making in-person events non-existent, we are excited to announce #BridgeConf.
  #BridgeConf is a one-day single track livestreamed conference-style event for PowerShell, automation, programming, infrastructure, sysadmin, and other miscellaneous nerds around the world.
