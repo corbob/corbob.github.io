@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Announcing #BridgeConf
+title: Announcing \#BridgeConf
 ---
 
 
