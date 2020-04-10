@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Announcing #BridgeConf
-date: 2020-04-09 07:00 -0700
+date: 2020-04-10 07:00 -0700
 ---
 ![#BridgeConf]({{ site.baseurl }}/images/BridgeConf.png)
 
@@ -29,7 +29,7 @@ April 30, 2020 from 08:00 PDT until approximately 17:15 PDT (that's 8:00 AM unti
 ## The Where
 
 This entirely virtual conference will be livestreamed to [Twitch.tv](https://twitch.tv/bridgeconf).
-Following the conference, we will be doing our best to edit and split the stream into it's corresponding sessions to be posted to YouTube.
+Following the conference, we will be doing our best to edit and split the stream into it's corresponding sessions to be posted online.
 
 ## The Who
 
@@ -47,7 +47,7 @@ Not everyone in the PowerShell community are pushing the boundaries.
 Some of us are just learning.
 Some of us have been doing this for a while.
 
-Even those of us that have been doing this for a decade can constantly learn new things.
+Even those of us that have been doing this for a decade constantly learn new things.
 As an example: at last year's PowerShell Summit, [Tyler Leonhardt](https://twitter.com/TylerLeonhardt) gave a talk titled [Using Visual Studio Code as Your Default PowerShell Editor](https://www.youtube.com/watch?v=bGn45vIeAMM).
 Now I've contributed to the PowerShell extension for Visual Studio.
 I've been using it for years.
