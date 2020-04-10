@@ -3,12 +3,12 @@ layout: post
 title: "Announcing #BridgeConf"
 ---
 
-
-## The Why
-
 What is the best part of the PowerShell community?
 That's an excellent question.
 As a community, we have numerous places to gather and exchange ideas, obtain advice, share our expertise, form relationships that extend beyond the confines of an office building.
+
+## The Why
+
 One of those places is [Discord](https://pwsh.ca/discord) and [Slack](https://pwsh.ca/slack) as well as on Freenode in the #powershell channel.
 The Discord and Slack are bridged together by a bot.
 This bot also loops in Freenode in a channel known as #bridge.
