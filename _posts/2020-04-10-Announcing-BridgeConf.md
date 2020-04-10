@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Announcing #BridgeConf
-date: 2020-04-10 07:00 -0700
 ---
 ![#BridgeConf]({{ site.baseurl }}/images/BridgeConf.png)
 
