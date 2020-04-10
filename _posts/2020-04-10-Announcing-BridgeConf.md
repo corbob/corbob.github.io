@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Announcing #BridgeConf"
-excerpt_separator: <!--more-->
 ---
 
 What is the best part of the PowerShell community?
