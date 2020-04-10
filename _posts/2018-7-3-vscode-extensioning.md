@@ -6,6 +6,8 @@ comments: true
 
 So, you have this great idea for a VS Code extension? But perhaps you're thinking "where do I start?" Well, fear not! for I have written this post to tell you the answer!
 
+<!--more-->
+
 Oh? Were you expecting me to have the answer? Well, you see the truth is I have no idea. I just took some code, put some other code in it, and it worked (well sorta).
 
 But for reals: Decide if you want to use TypeScript or JavaScript (I picked TypeScript because all the samples were in TypeScript). Then take a look at [https://code.visualstudio.com/docs/extensions/example-hello-world](https://code.visualstudio.com/docs/extensions/example-hello-world) to get your first example done.
