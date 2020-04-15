@@ -4,10 +4,10 @@ title: "Configuring ChocolateyGUI for non admin use"
 date: 2020-04-17 07:00 -0700
 ---
 
-So the other day I needed to fix something on my children's laptops.
+The other day I needed to fix something on my children's laptops.
 This brought to my attention that when I set them up I had given them admin.
 Naturally this is not an ideal setup.
-But the issue becomes: How do I grant them the ability to install software without needing to reach out to me often.
+But the issue becomes: How do I grant them the ability to install software without needing to reach out to me too often.
 Quite simply, they need the ability to run installations as an administrator, but not the ability to just become administrator.
 
 <!--more-->
@@ -52,7 +52,7 @@ Fortunately for you, I have taken the time to look at all of them.
 None of them actually act like sudo.
 In fact, the only thing they do is try to elevate you to run a command, not try to run a command elevated.
 Thus they're effectively running the PowerShell code: `Start-Process -Verb RunAs`.
-Years ago, when we were just starting out with Adobe Creative Cloud (ACC), we discovered that it needed nearly weekly updates.
+Years ago, when we were just starting out with Adobe Creative Cloud, we discovered that it needed nearly weekly updates.
 Maintaining an installation that requires that frequent of updates is just untenable.
 We experimented with trying to find something like sudo, but for Windows.
 Of course most "sudo" solutions for Windows don't actually understand what sudo does.
@@ -62,7 +62,7 @@ This does **not** solve the problem we had, nor does it solve my problem at hand
 Enter [sudowin](https://sourceforge.net/projects/sudowin/), which appears to be the only product that takes the (non-admin) users password and allows them to elevate.
 Naturally, it hasn't been updated in quite some time and the documents supporting it are no longer accessible as it would seem SourceForge no longer hosts project websites like they used to.
 To top it off, the Internet Archive's Wayback Machine doesn't have an archive of the documentation.
-Given that the documentation is somewhat lacking, we need to make guesses based on the configuration and see what we can sort out.
+Given that the documentation is somewhat lacking, we need to make guesses based on the default configuration and see what we can sort out.
 Fortunate for you dear reader, I have done some of the trial and error myself.
 
 Looking in the install directory (`C:\Program Files (x86)\sudowin\server`) you will find a `sudoers.xml` file.
@@ -83,3 +83,11 @@ Some drawbacks to this solution: the non-admin user must have a password on it, 
 To work around these drawbacks, you could have the non-admin user configured to automatically log in.
 You could also attempt to use a user with no password (this might be a solution, I have not actually tested this scenario).
 If you edit the properties of your ChocolateyGUI shortcut, you could prepend `sudo` to the target which will launch the Console client of sudowin and allow you to enter the password in a terminal window.
+
+This is the configuration I have settled upon for now.
+Is it ideal?
+No.
+Does it work?
+Yes.
+Have you encountered a similar issue?
+What steps did you take to resolve it?
