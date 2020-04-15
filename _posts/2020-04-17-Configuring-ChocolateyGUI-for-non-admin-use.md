@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Configuring ChocolateyGUI for non admin use"
+date: 2020-04-17 07:00 -0700
 ---
 
 So the other day I needed to fix something on my children's laptops.
